@@ -44,5 +44,6 @@ tasks.register('coreTest', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.prism.engine.core.CoreTests'
 }
+
+tasks.named('test') { enabled = false }
 tasks.named('check') { dependsOn tasks.named('coreTest') }
-tasks.named('test') { failOnNoDiscoveredTests = false }
